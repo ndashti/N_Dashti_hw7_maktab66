@@ -1,0 +1,170 @@
+@font-face {
+    font-family: 'codepro';
+    src: url(./font/SourceCodePro-Bold.ttf);
+}
+*,
+*::before,
+*::after
+{  margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #111;
+    font-size: 1.2rem;
+    line-height: 1.5;
+    font-family: Tahoma;
+    /* position: relative; */
+}
+p{
+    color: #eee;
+}
+h1 , h2 , h3 , h4,h5{
+    font-family: codepro;
+    color: #eee;
+}
+hr{
+    border:0;
+    background: linear-gradient(to right, rgb(100, 39, 3), rgb(68, 67, 67));
+    height: 1px;
+    margin:10% 5%;
+}
+.container{
+    margin:5% 5% 5% 0;
+}
+
+h4 {
+    background-image: linear-gradient(to left,
+        rgba(255, 0, 0, 0.5),
+        rgba(86, 86, 241, 0.4),
+        rgba(255, 0, 0, 0.6));
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    margin:5% 0;
+}
+/* ------------------------------- */
+.nav{
+    background-color: rgba(255, 0, 0, 0.5);  
+    position: fixed;
+    top: 0;
+    width: 100%; 
+    z-index: 9999;
+}
+
+.nav a{
+  float: left;
+  display: block;
+  text-align: center;
+  padding: 1.1% 4% ;
+  text-decoration: none;
+  color: #eee;
+}
+.nav a:hover{
+    /* border-bottom:3px solid rgb(77, 0, 66); */
+    background-color:rgb(255,0,0);
+}
+.ham div{
+    width: 35px;
+    height: 5px;
+    background-image: linear-gradient(to left,
+    rgba(255, 0, 0, 0.5),
+    rgba(86, 86, 241, 0.4),
+    rgba(255, 0, 0, 0.6));
+    margin: 6px 0;
+}
+.ham{
+    display: none;
+    margin :1%;
+    background-color: #111;
+}
+.ham div{
+    border-radius: 25%;
+}
+.ham div:nth-child(odd){
+    width: 20px;
+}
+.ham div:last-child{
+    display: flex;
+    margin-left: 15px;
+}
+/* ---------------------------------- */
+header{
+    display: flex;
+    margin: 0 2% 0 2%;
+    justify-content: center;
+}
+.avater img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+.avater{
+    margin:0 4%;
+    align-self: center;
+
+}
+.about{
+    flex-basis: 70%;
+}
+.about p{
+    margin:20px 0;
+}
+.hand{
+    display: flex;
+}
+.hand img{
+    width: 35px;
+    height: 35px;
+    margin:0 10px;
+}
+/* ----------------------------------------- */
+.title{
+    text-align: center;
+}
+.cart-row{
+    display: flex;
+
+}
+.cart{
+    flex-basis: 30%;
+    margin: 5%;
+}
+.icon img{
+    width: 50px;
+    height:50px;
+    filter: invert(1);
+}
+/* ------------------------------------------ */
+@media screen and (max-width: 992px) {
+    header{
+        flex-direction: column;
+    }
+    .cart-row{
+        display: flex;
+        flex-wrap: wrap;    
+    }
+    .nav a{
+        display: none;
+    }
+    .nav{
+        background-color: rgba(1, 1, 1, 0);  
+    }
+    .ham{
+        float: right;
+        display: block;
+        cursor: pointer;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .about{
+        text-align: center;
+    }
+    .hand{
+        justify-content: center;
+    }
+    .cart-row{
+        flex-direction: column;
+    }
+
+}
